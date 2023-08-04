@@ -1,0 +1,23 @@
+.logo{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 25%;
+}
+
+.input-item{
+    padding: 0 20px;
+    width: 80%;
+    margin:auto;
+    border-radius: 12px;
+    border: 2px solid #e2e2e2;
+    height: 70px;
+
+}
+
+#countdown-number {
+    color: white;
+    line-height: 40px;
+}
+  

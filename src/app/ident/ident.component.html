@@ -1,0 +1,43 @@
+<ion-content [fullscreen]="true" color="primary">
+
+  <div class="logo">
+    <img src="../../../assets/logo.png" alt="">
+  </div>
+  
+  <!-- Forget password page -->
+  <div> 
+    <form [formGroup]="formReset">
+      <ion-item lines="none" class="ion-item" color="secondary">
+        <fieldset  class="input-item">
+          <legend>Username</legend> 
+          <ion-input formControlName="username" type="text" placeholder="Usename"></ion-input>
+        </fieldset>
+      </ion-item>
+      
+      <ion-item lines="none" class="ion-item" color="secondary">
+        <fieldset class="input-item">
+          <legend>Password</legend> 
+          <ion-input formControlName="password" type="password" placeholder="*******"></ion-input>
+        </fieldset>
+      </ion-item>
+      
+      <ion-item lines="none" class="ion-item" color="secondary">
+        <fieldset class="input-item">
+          <legend>GSM</legend> 
+          <ion-input formControlName="GSM" type="text" placeholder="*******"></ion-input>
+        </fieldset>
+      </ion-item>
+
+      <ion-item lines="none" class="ion-item" color="secondary">
+        <fieldset class="input-item">
+          <legend>Identité fiscale</legend> 
+          <ion-input formControlName="IdF" type="text" placeholder="*******"></ion-input>
+        </fieldset>
+      </ion-item>
+
+      <p class="routing" (click)="back()">Sign In?</p>
+      <ion-button class="login-button" color="dark" expand="block">Reset Security Code</ion-button>
+    </form>
+  </div>
+
+</ion-content>

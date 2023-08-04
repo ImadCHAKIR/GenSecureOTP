@@ -1,0 +1,36 @@
+<ion-content [fullscreen]="true" color="primary">
+
+  <div class="logo logoAnimation" [class.active]="this.globals.starting">
+    <img src="../../../assets/logo.png" alt="">
+  </div>
+
+  <!-- Login Page -->
+  <div>
+    <form [formGroup]="formData">
+      <ion-item lines="none" class="ion-item" color="secondary">
+        <fieldset  class="input-item">
+          <legend>Username</legend> 
+          <ion-input formControlName="username" type="text" placeholder="Usename"></ion-input>
+        </fieldset>
+      </ion-item>
+      
+      <ion-item lines="none" class="ion-item" color="secondary">
+        <fieldset class="input-item">
+          <legend>Password</legend> 
+          <ion-input formControlName="password" type="password" placeholder="*******"></ion-input>
+        </fieldset>
+      </ion-item>
+      
+      <ion-item lines="none" class="ion-item" color="secondary">
+        <fieldset class="input-item">
+          <legend>Security code</legend> 
+          <ion-input formControlName="securityCode" type="password" placeholder="*******"></ion-input>
+        </fieldset>
+      </ion-item>
+
+      <p class="routing" [routerLink]="['/ident']">Forgot Security Code?</p>
+      <ion-button class="login-button" color="dark" (click)="login()" expand="block">Login</ion-button>
+    </form>
+  </div>
+
+</ion-content>
