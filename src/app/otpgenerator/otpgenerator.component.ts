@@ -31,7 +31,6 @@ export class OTPGeneratorComponent implements OnInit {
   }
 
   copy(){
-    console.log("codiing")
     navigator.clipboard.writeText(this.otpCode.getValue());
     this.code = "Copied!";
     setTimeout(() => (this.code = this.otpCode.getValue()), 1000);  
