@@ -11,10 +11,6 @@ const routes: Routes = [
   {path: 'auth',component: AuthComponentComponent},
   {path: 'ident',component: IdentPagePage},
   {path: 'otp',component: OTPGeneratorComponent, canActivate: [AuthGuard]},
-  {
-    path: 'ident-page',
-    loadChildren: () => import('./ident-page/ident-page.module').then( m => m.IdentPagePageModule)
-  }
 ];
 
 @NgModule({

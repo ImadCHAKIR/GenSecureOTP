@@ -9,16 +9,30 @@
 .input-item{
     padding: 0 20px;
     width: 80%;
+    max-width: 350px;
     margin:auto;
     border-radius: 12px;
     border: 2px solid #e2e2e2;
     height: 70px;
-
+    display: flex;
+    flex-direction: row;
     ion-input{
         margin-left: 40%;
     }
-
 }
+.copyBtn{
+    position: relative;
+    background: none;
+    align-items: center;
+    width: 70px;
+    height: 55px;
+    right: -20px;
+    top: -14px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    cursor: pointer;
+}
+
 
 
   

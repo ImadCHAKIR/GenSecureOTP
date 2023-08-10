@@ -12,6 +12,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 export class OTPGeneratorComponent implements OnInit {
   otpCode: BehaviorSubject<string> = new BehaviorSubject<string>('');
   otpCodeotpCode: Observable<string> = this.otpCode.asObservable();
+  code: string =''
 
   constructor(private auth: AuthService) { }
 
@@ -23,9 +24,17 @@ export class OTPGeneratorComponent implements OnInit {
         if (data.connect){
           localStorage.setItem('code', data.code)
           this.otpCode.next(data.code)
+          this.code = this.otpCode.getValue()
         }
       });
     }, 10000)
+  }
+
+  copy(){
+    console.log("codiing")
+    navigator.clipboard.writeText(this.otpCode.getValue());
+    this.code = "Copied!";
+    setTimeout(() => (this.code = this.otpCode.getValue()), 1000);  
   }
 
 }
