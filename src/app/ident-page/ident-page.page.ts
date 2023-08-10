@@ -5,6 +5,7 @@ import { IdentService } from '../services/ident.service';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LanguageService } from '../services/language.service';
 import { ExceptionService } from '../services/exception.service';
+import { InputService } from '../services/input.service';
 
 @Component({
   selector: 'app-ident-page',
@@ -12,22 +13,15 @@ import { ExceptionService } from '../services/exception.service';
   styleUrls: ['./ident-page.page.scss'],
 })
 export class IdentPagePage implements OnInit {
-  formReset: FormGroup;
   isLoading : boolean = false
 
   constructor(
-    private fb:FormBuilder, 
     private router: Router, 
     private ident: IdentService,
     private lang: LanguageService,
-    private exception: ExceptionService) 
+    private exception: ExceptionService,
+    private input: InputService) 
   { 
-    this.formReset = this.fb.group({
-      username: ['',[Validators.required]],
-      password: ['',[Validators.required]],
-      gsm: ['',[Validators.required]],
-      idf: ['',[Validators.required]]
-    });
   }
 
   ngOnInit() {}
@@ -38,22 +32,22 @@ export class IdentPagePage implements OnInit {
 
   identify(){
     var user = {
-      "username": this.formReset.get('username').value,
-      "motDePasse": this.formReset.get('password').value,
-      "gsm": this.formReset.get('gsm').value,
-      "idF": this.formReset.get('idf').value
+      "username": this.input.getFormReset().get('username').value,
+      "motDePasse": this.input.getFormReset().get('password').value,
+      "gsm": this.input.getFormReset().get('gsm').value,
+      "idF": this.input.getFormReset().get('idf').value
     }
 
     console.log(user)
 
-    if(this.formReset.valid){
+    if(this.input.getFormReset().valid){
       this.isLoading = true
 
-      this.ident.userIdent(user).subscribe((data:any)=>{
-        console.log(data);
-      },
+      this.ident.userIdent(user).subscribe(
+        (data:any)=>{ console.log(data);},
         error => this.exception.setMessage(this.lang.getLang()["Exceptions"]["incorrect"])
       )
+      return
     }  
     
     if (!(user["username"] && user["motDePasse"] && user["codeSecurite"])){

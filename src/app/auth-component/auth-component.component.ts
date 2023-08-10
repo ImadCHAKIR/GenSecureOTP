@@ -7,6 +7,7 @@ import { Globals } from '../globals';
 import { Router } from '@angular/router';
 import { LanguageService } from '../services/language.service';
 import { ExceptionService } from '../services/exception.service';
+import { InputService } from '../services/input.service';
 
 @Component({
   selector: 'app-auth-component',
@@ -15,22 +16,18 @@ import { ExceptionService } from '../services/exception.service';
   styleUrls: ['./auth-component.component.scss'],
 })
 export class AuthComponentComponent implements OnInit {
-  formData: FormGroup;
+  
   isLoading: boolean = false;
 
-  constructor(
-    private fb:FormBuilder, 
+  constructor( 
     private auth:AuthService, 
     private globals: Globals, 
     private router: Router,
     private lang: LanguageService,
-    private exception: ExceptionService) 
+    private exception: ExceptionService,
+    private input: InputService) 
   {
-    this.formData = this.fb.group({
-      username: ['',[Validators.required]],
-      password: ['',[Validators.required]],
-      securityCode: ['',[Validators.required]]
-    });
+    
   }
 
   ngOnInit(){
@@ -39,12 +36,12 @@ export class AuthComponentComponent implements OnInit {
 
   login(){
     var user = {
-      "username": this.formData.get('username').value,
-      "motDePasse": this.formData.get('password').value,
-      "codeSecurite": this.formData.get('securityCode').value
+      "username": this.input.getFormData().get('username').value,
+      "motDePasse": this.input.getFormData().get('password').value,
+      "codeSecurite": this.input.getFormData().get('securityCode').value
     }
     
-    if(this.formData.valid){
+    if(this.input.getFormData().valid){
       this.isLoading = true
 
       this.auth.userLogin(user).subscribe((data:any)=>{

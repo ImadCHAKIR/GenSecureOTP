@@ -6,3 +6,382 @@
 2023-08-10 03:55:09.512 +01:00 [INF] Application started. Press Ctrl+C to shut down.
 2023-08-10 03:55:09.514 +01:00 [INF] Hosting environment: Development
 2023-08-10 03:55:09.516 +01:00 [INF] Content root path: C:\Users\sir0s\Desktop\Ionic-Angular-Login-Template-master\CodeGenerator\api
+2023-08-10 14:32:20.178 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://127.0.0.1:5156/Authentification/authentifier - -
+2023-08-10 14:32:20.250 +01:00 [WRN] Failed to determine the https port for redirect.
+2023-08-10 14:32:20.253 +01:00 [INF] CORS policy execution successful.
+2023-08-10 14:32:20.257 +01:00 [INF] HTTP OPTIONS /Authentification/authentifier responded 204 in 8.9037 ms
+2023-08-10 14:32:20.270 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://127.0.0.1:5156/Authentification/authentifier - - - 204 - - 95.0470ms
+2023-08-10 14:32:20.275 +01:00 [INF] Request starting HTTP/1.1 POST http://127.0.0.1:5156/Authentification/authentifier application/json 64
+2023-08-10 14:32:20.277 +01:00 [INF] CORS policy execution successful.
+2023-08-10 14:32:20.282 +01:00 [INF] Executing endpoint 'apitest.Controllers.AuthentificationController.Authentifier (apitest)'
+2023-08-10 14:32:20.309 +01:00 [INF] Route matched with {action = "Authentifier", controller = "Authentification"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Authentifier(GenSecurOTP.Classes.AuthentificationRequest) on controller apitest.Controllers.AuthentificationController (apitest).
+2023-08-10 14:32:21.178 +01:00 [INF] Request starting HTTP/1.1 POST http://127.0.0.1:5156/Authentification/authentifier application/json 64
+2023-08-10 14:32:21.187 +01:00 [INF] CORS policy execution successful.
+2023-08-10 14:32:21.190 +01:00 [INF] Executing endpoint 'apitest.Controllers.AuthentificationController.Authentifier (apitest)'
+2023-08-10 14:32:21.192 +01:00 [INF] Route matched with {action = "Authentifier", controller = "Authentification"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Authentifier(GenSecurOTP.Classes.AuthentificationRequest) on controller apitest.Controllers.AuthentificationController (apitest).
+2023-08-10 14:32:21.337 +01:00 [INF] Request starting HTTP/1.1 POST http://127.0.0.1:5156/Authentification/authentifier application/json 64
+2023-08-10 14:32:21.339 +01:00 [INF] CORS policy execution successful.
+2023-08-10 14:32:21.340 +01:00 [INF] Executing endpoint 'apitest.Controllers.AuthentificationController.Authentifier (apitest)'
+2023-08-10 14:32:21.341 +01:00 [INF] Route matched with {action = "Authentifier", controller = "Authentification"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Authentifier(GenSecurOTP.Classes.AuthentificationRequest) on controller apitest.Controllers.AuthentificationController (apitest).
+2023-08-10 14:32:21.484 +01:00 [INF] Executed DbCommand (34ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Username], [u].[GSM], [u].[IdF], [u].[MotDePasse], [u].[Nom], [u].[Prenom]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__p_0
+2023-08-10 14:32:21.484 +01:00 [INF] Executed DbCommand (37ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Username], [u].[GSM], [u].[IdF], [u].[MotDePasse], [u].[Nom], [u].[Prenom]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__p_0
+2023-08-10 14:32:21.484 +01:00 [INF] Executed DbCommand (36ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Username], [u].[GSM], [u].[IdF], [u].[MotDePasse], [u].[Nom], [u].[Prenom]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__p_0
+2023-08-10 14:32:21.506 +01:00 [INF] Request starting HTTP/1.1 POST http://127.0.0.1:5156/Authentification/authentifier application/json 64
+2023-08-10 14:32:21.508 +01:00 [INF] CORS policy execution successful.
+2023-08-10 14:32:21.509 +01:00 [INF] Executing endpoint 'apitest.Controllers.AuthentificationController.Authentifier (apitest)'
+2023-08-10 14:32:21.510 +01:00 [INF] Route matched with {action = "Authentifier", controller = "Authentification"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Authentifier(GenSecurOTP.Classes.AuthentificationRequest) on controller apitest.Controllers.AuthentificationController (apitest).
+2023-08-10 14:32:21.527 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Username], [u].[GSM], [u].[IdF], [u].[MotDePasse], [u].[Nom], [u].[Prenom]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__p_0
+2023-08-10 14:32:21.572 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[@__request_Username_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[CodeSec]
+FROM [CodesSecurite] AS [c]
+WHERE [c].[Username] = @__request_Username_0
+ORDER BY [c].[DateGen] DESC
+2023-08-10 14:32:21.572 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[@__request_Username_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[CodeSec]
+FROM [CodesSecurite] AS [c]
+WHERE [c].[Username] = @__request_Username_0
+ORDER BY [c].[DateGen] DESC
+2023-08-10 14:32:21.572 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[@__request_Username_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[CodeSec]
+FROM [CodesSecurite] AS [c]
+WHERE [c].[Username] = @__request_Username_0
+ORDER BY [c].[DateGen] DESC
+2023-08-10 14:32:21.573 +01:00 [INF] Executed DbCommand (6ms) [Parameters=[@__request_Username_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[CodeSec]
+FROM [CodesSecurite] AS [c]
+WHERE [c].[Username] = @__request_Username_0
+ORDER BY [c].[DateGen] DESC
+2023-08-10 14:32:21.583 +01:00 [INF] Authentification réussie pour l'utilisateur test à 10/08/2023 14:32:21
+2023-08-10 14:32:21.582 +01:00 [INF] Authentification réussie pour l'utilisateur test à 10/08/2023 14:32:21
+2023-08-10 14:32:21.582 +01:00 [INF] Authentification réussie pour l'utilisateur test à 10/08/2023 14:32:21
+2023-08-10 14:32:21.582 +01:00 [INF] Authentification réussie pour l'utilisateur test à 10/08/2023 14:32:21
+2023-08-10 14:32:21.722 +01:00 [INF] Executed DbCommand (8ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [CodesOtp] ([Code], [DateExp], [DateGen], [Username])
+OUTPUT INSERTED.[IDOTP]
+VALUES (@p0, @p1, @p2, @p3);
+2023-08-10 14:32:21.722 +01:00 [INF] Executed DbCommand (9ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [CodesOtp] ([Code], [DateExp], [DateGen], [Username])
+OUTPUT INSERTED.[IDOTP]
+VALUES (@p0, @p1, @p2, @p3);
+2023-08-10 14:32:21.722 +01:00 [INF] Executed DbCommand (9ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [CodesOtp] ([Code], [DateExp], [DateGen], [Username])
+OUTPUT INSERTED.[IDOTP]
+VALUES (@p0, @p1, @p2, @p3);
+2023-08-10 14:32:21.722 +01:00 [INF] Executed DbCommand (9ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [CodesOtp] ([Code], [DateExp], [DateGen], [Username])
+OUTPUT INSERTED.[IDOTP]
+VALUES (@p0, @p1, @p2, @p3);
+2023-08-10 14:32:21.747 +01:00 [INF] Code OTP généré pour l'utilisateur test : 1980348 à 10/08/2023 14:32:21. Date d'expiration : 10/08/2023 14:33:21
+2023-08-10 14:32:21.747 +01:00 [INF] Code OTP généré pour l'utilisateur test : 3682569 à 10/08/2023 14:32:21. Date d'expiration : 10/08/2023 14:33:21
+2023-08-10 14:32:21.747 +01:00 [INF] Code OTP généré pour l'utilisateur test : 1963251 à 10/08/2023 14:32:21. Date d'expiration : 10/08/2023 14:33:21
+2023-08-10 14:32:21.747 +01:00 [INF] Code OTP généré pour l'utilisateur test : 7142670 à 10/08/2023 14:32:21. Date d'expiration : 10/08/2023 14:33:21
+2023-08-10 14:32:21.755 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`3[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-08-10 14:32:21.755 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`3[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-08-10 14:32:21.755 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`3[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-08-10 14:32:21.755 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`3[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-08-10 14:32:21.774 +01:00 [INF] Executed action apitest.Controllers.AuthentificationController.Authentifier (apitest) in 259.82ms
+2023-08-10 14:32:21.774 +01:00 [INF] Executed action apitest.Controllers.AuthentificationController.Authentifier (apitest) in 577.7036ms
+2023-08-10 14:32:21.774 +01:00 [INF] Executed action apitest.Controllers.AuthentificationController.Authentifier (apitest) in 1460.9006ms
+2023-08-10 14:32:21.774 +01:00 [INF] Executed action apitest.Controllers.AuthentificationController.Authentifier (apitest) in 429.2286ms
+2023-08-10 14:32:21.776 +01:00 [INF] Executed endpoint 'apitest.Controllers.AuthentificationController.Authentifier (apitest)'
+2023-08-10 14:32:21.776 +01:00 [INF] Executed endpoint 'apitest.Controllers.AuthentificationController.Authentifier (apitest)'
+2023-08-10 14:32:21.777 +01:00 [INF] Executed endpoint 'apitest.Controllers.AuthentificationController.Authentifier (apitest)'
+2023-08-10 14:32:21.778 +01:00 [INF] Executed endpoint 'apitest.Controllers.AuthentificationController.Authentifier (apitest)'
+2023-08-10 14:32:21.779 +01:00 [INF] HTTP POST /Authentification/authentifier responded 200 in 593.3819 ms
+2023-08-10 14:32:21.779 +01:00 [INF] HTTP POST /Authentification/authentifier responded 200 in 271.5470 ms
+2023-08-10 14:32:21.780 +01:00 [INF] HTTP POST /Authentification/authentifier responded 200 in 1502.9979 ms
+2023-08-10 14:32:21.781 +01:00 [INF] HTTP POST /Authentification/authentifier responded 200 in 442.1947 ms
+2023-08-10 14:32:21.792 +01:00 [INF] Request finished HTTP/1.1 POST http://127.0.0.1:5156/Authentification/authentifier application/json 64 - 200 - application/json;+charset=utf-8 454.9928ms
+2023-08-10 14:32:21.792 +01:00 [INF] Request finished HTTP/1.1 POST http://127.0.0.1:5156/Authentification/authentifier application/json 64 - 200 - application/json;+charset=utf-8 1516.7828ms
+2023-08-10 14:32:21.792 +01:00 [INF] Request finished HTTP/1.1 POST http://127.0.0.1:5156/Authentification/authentifier application/json 64 - 200 - application/json;+charset=utf-8 613.8510ms
+2023-08-10 14:32:21.792 +01:00 [INF] Request finished HTTP/1.1 POST http://127.0.0.1:5156/Authentification/authentifier application/json 64 - 200 - application/json;+charset=utf-8 285.1766ms
+2023-08-10 14:32:31.812 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://127.0.0.1:5156/Authentification/authentifier - -
+2023-08-10 14:32:31.813 +01:00 [INF] CORS policy execution successful.
+2023-08-10 14:32:31.814 +01:00 [INF] HTTP OPTIONS /Authentification/authentifier responded 204 in 0.5915 ms
+2023-08-10 14:32:31.815 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://127.0.0.1:5156/Authentification/authentifier - - - 204 - - 2.7697ms
+2023-08-10 14:32:31.817 +01:00 [INF] Request starting HTTP/1.1 POST http://127.0.0.1:5156/Authentification/authentifier application/json 64
+2023-08-10 14:32:31.817 +01:00 [INF] CORS policy execution successful.
+2023-08-10 14:32:31.818 +01:00 [INF] Executing endpoint 'apitest.Controllers.AuthentificationController.Authentifier (apitest)'
+2023-08-10 14:32:31.819 +01:00 [INF] Route matched with {action = "Authentifier", controller = "Authentification"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Authentifier(GenSecurOTP.Classes.AuthentificationRequest) on controller apitest.Controllers.AuthentificationController (apitest).
+2023-08-10 14:32:31.831 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Username], [u].[GSM], [u].[IdF], [u].[MotDePasse], [u].[Nom], [u].[Prenom]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__p_0
+2023-08-10 14:32:31.834 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__request_Username_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[CodeSec]
+FROM [CodesSecurite] AS [c]
+WHERE [c].[Username] = @__request_Username_0
+ORDER BY [c].[DateGen] DESC
+2023-08-10 14:32:31.836 +01:00 [INF] Authentification réussie pour l'utilisateur test à 10/08/2023 14:32:31
+2023-08-10 14:32:31.840 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [CodesOtp] ([Code], [DateExp], [DateGen], [Username])
+OUTPUT INSERTED.[IDOTP]
+VALUES (@p0, @p1, @p2, @p3);
+2023-08-10 14:32:31.844 +01:00 [INF] Code OTP généré pour l'utilisateur test : 4995602 à 10/08/2023 14:32:31. Date d'expiration : 10/08/2023 14:33:31
+2023-08-10 14:32:31.845 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`3[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-08-10 14:32:31.847 +01:00 [INF] Executed action apitest.Controllers.AuthentificationController.Authentifier (apitest) in 26.672ms
+2023-08-10 14:32:31.847 +01:00 [INF] Executed endpoint 'apitest.Controllers.AuthentificationController.Authentifier (apitest)'
+2023-08-10 14:32:31.848 +01:00 [INF] HTTP POST /Authentification/authentifier responded 200 in 30.8762 ms
+2023-08-10 14:32:31.849 +01:00 [INF] Request finished HTTP/1.1 POST http://127.0.0.1:5156/Authentification/authentifier application/json 64 - 200 - application/json;+charset=utf-8 32.7986ms
+2023-08-10 14:32:42.466 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://127.0.0.1:5156/Authentification/authentifier - -
+2023-08-10 14:32:42.472 +01:00 [INF] CORS policy execution successful.
+2023-08-10 14:32:42.475 +01:00 [INF] HTTP OPTIONS /Authentification/authentifier responded 204 in 3.4727 ms
+2023-08-10 14:32:42.477 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://127.0.0.1:5156/Authentification/authentifier - - - 204 - - 10.7389ms
+2023-08-10 14:32:42.479 +01:00 [INF] Request starting HTTP/1.1 POST http://127.0.0.1:5156/Authentification/authentifier application/json 64
+2023-08-10 14:32:42.480 +01:00 [INF] CORS policy execution successful.
+2023-08-10 14:32:42.481 +01:00 [INF] Executing endpoint 'apitest.Controllers.AuthentificationController.Authentifier (apitest)'
+2023-08-10 14:32:42.482 +01:00 [INF] Route matched with {action = "Authentifier", controller = "Authentification"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Authentifier(GenSecurOTP.Classes.AuthentificationRequest) on controller apitest.Controllers.AuthentificationController (apitest).
+2023-08-10 14:32:42.495 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Username], [u].[GSM], [u].[IdF], [u].[MotDePasse], [u].[Nom], [u].[Prenom]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__p_0
+2023-08-10 14:32:42.499 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__request_Username_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[CodeSec]
+FROM [CodesSecurite] AS [c]
+WHERE [c].[Username] = @__request_Username_0
+ORDER BY [c].[DateGen] DESC
+2023-08-10 14:32:42.501 +01:00 [INF] Authentification réussie pour l'utilisateur test à 10/08/2023 14:32:42
+2023-08-10 14:32:42.503 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [CodesOtp] ([Code], [DateExp], [DateGen], [Username])
+OUTPUT INSERTED.[IDOTP]
+VALUES (@p0, @p1, @p2, @p3);
+2023-08-10 14:32:42.505 +01:00 [INF] Code OTP généré pour l'utilisateur test : 3667626 à 10/08/2023 14:32:42. Date d'expiration : 10/08/2023 14:33:42
+2023-08-10 14:32:42.506 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`3[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-08-10 14:32:42.507 +01:00 [INF] Executed action apitest.Controllers.AuthentificationController.Authentifier (apitest) in 23.8645ms
+2023-08-10 14:32:42.507 +01:00 [INF] Executed endpoint 'apitest.Controllers.AuthentificationController.Authentifier (apitest)'
+2023-08-10 14:32:42.508 +01:00 [INF] HTTP POST /Authentification/authentifier responded 200 in 28.3436 ms
+2023-08-10 14:32:42.509 +01:00 [INF] Request finished HTTP/1.1 POST http://127.0.0.1:5156/Authentification/authentifier application/json 64 - 200 - application/json;+charset=utf-8 30.4187ms
+2023-08-10 14:32:52.466 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://127.0.0.1:5156/Authentification/authentifier - -
+2023-08-10 14:32:52.467 +01:00 [INF] CORS policy execution successful.
+2023-08-10 14:32:52.468 +01:00 [INF] HTTP OPTIONS /Authentification/authentifier responded 204 in 0.6582 ms
+2023-08-10 14:32:52.469 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://127.0.0.1:5156/Authentification/authentifier - - - 204 - - 2.7212ms
+2023-08-10 14:32:52.471 +01:00 [INF] Request starting HTTP/1.1 POST http://127.0.0.1:5156/Authentification/authentifier application/json 64
+2023-08-10 14:32:52.473 +01:00 [INF] CORS policy execution successful.
+2023-08-10 14:32:52.473 +01:00 [INF] Executing endpoint 'apitest.Controllers.AuthentificationController.Authentifier (apitest)'
+2023-08-10 14:32:52.474 +01:00 [INF] Route matched with {action = "Authentifier", controller = "Authentification"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Authentifier(GenSecurOTP.Classes.AuthentificationRequest) on controller apitest.Controllers.AuthentificationController (apitest).
+2023-08-10 14:32:52.486 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Username], [u].[GSM], [u].[IdF], [u].[MotDePasse], [u].[Nom], [u].[Prenom]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__p_0
+2023-08-10 14:32:52.491 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__request_Username_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[CodeSec]
+FROM [CodesSecurite] AS [c]
+WHERE [c].[Username] = @__request_Username_0
+ORDER BY [c].[DateGen] DESC
+2023-08-10 14:32:52.493 +01:00 [INF] Authentification réussie pour l'utilisateur test à 10/08/2023 14:32:52
+2023-08-10 14:32:52.495 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [CodesOtp] ([Code], [DateExp], [DateGen], [Username])
+OUTPUT INSERTED.[IDOTP]
+VALUES (@p0, @p1, @p2, @p3);
+2023-08-10 14:32:52.498 +01:00 [INF] Code OTP généré pour l'utilisateur test : 2887069 à 10/08/2023 14:32:52. Date d'expiration : 10/08/2023 14:33:52
+2023-08-10 14:32:52.499 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`3[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-08-10 14:32:52.500 +01:00 [INF] Executed action apitest.Controllers.AuthentificationController.Authentifier (apitest) in 24.4402ms
+2023-08-10 14:32:52.501 +01:00 [INF] Executed endpoint 'apitest.Controllers.AuthentificationController.Authentifier (apitest)'
+2023-08-10 14:32:52.501 +01:00 [INF] HTTP POST /Authentification/authentifier responded 200 in 28.7545 ms
+2023-08-10 14:32:52.503 +01:00 [INF] Request finished HTTP/1.1 POST http://127.0.0.1:5156/Authentification/authentifier application/json 64 - 200 - application/json;+charset=utf-8 31.1843ms
+2023-08-10 14:33:02.469 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://127.0.0.1:5156/Authentification/authentifier - -
+2023-08-10 14:33:02.474 +01:00 [INF] CORS policy execution successful.
+2023-08-10 14:33:02.479 +01:00 [INF] HTTP OPTIONS /Authentification/authentifier responded 204 in 4.7304 ms
+2023-08-10 14:33:02.492 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://127.0.0.1:5156/Authentification/authentifier - - - 204 - - 23.1325ms
+2023-08-10 14:33:02.495 +01:00 [INF] Request starting HTTP/1.1 POST http://127.0.0.1:5156/Authentification/authentifier application/json 64
+2023-08-10 14:33:02.500 +01:00 [INF] CORS policy execution successful.
+2023-08-10 14:33:02.503 +01:00 [INF] Executing endpoint 'apitest.Controllers.AuthentificationController.Authentifier (apitest)'
+2023-08-10 14:33:02.504 +01:00 [INF] Route matched with {action = "Authentifier", controller = "Authentification"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Authentifier(GenSecurOTP.Classes.AuthentificationRequest) on controller apitest.Controllers.AuthentificationController (apitest).
+2023-08-10 14:33:02.514 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Username], [u].[GSM], [u].[IdF], [u].[MotDePasse], [u].[Nom], [u].[Prenom]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__p_0
+2023-08-10 14:33:02.519 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__request_Username_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[CodeSec]
+FROM [CodesSecurite] AS [c]
+WHERE [c].[Username] = @__request_Username_0
+ORDER BY [c].[DateGen] DESC
+2023-08-10 14:33:02.521 +01:00 [INF] Authentification réussie pour l'utilisateur test à 10/08/2023 14:33:02
+2023-08-10 14:33:02.524 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [CodesOtp] ([Code], [DateExp], [DateGen], [Username])
+OUTPUT INSERTED.[IDOTP]
+VALUES (@p0, @p1, @p2, @p3);
+2023-08-10 14:33:02.526 +01:00 [INF] Code OTP généré pour l'utilisateur test : 3746653 à 10/08/2023 14:33:02. Date d'expiration : 10/08/2023 14:34:02
+2023-08-10 14:33:02.526 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`3[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-08-10 14:33:02.528 +01:00 [INF] Executed action apitest.Controllers.AuthentificationController.Authentifier (apitest) in 22.8038ms
+2023-08-10 14:33:02.529 +01:00 [INF] Executed endpoint 'apitest.Controllers.AuthentificationController.Authentifier (apitest)'
+2023-08-10 14:33:02.529 +01:00 [INF] HTTP POST /Authentification/authentifier responded 200 in 29.3680 ms
+2023-08-10 14:33:02.530 +01:00 [INF] Request finished HTTP/1.1 POST http://127.0.0.1:5156/Authentification/authentifier application/json 64 - 200 - application/json;+charset=utf-8 35.2265ms
+2023-08-10 14:33:12.462 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://127.0.0.1:5156/Authentification/authentifier - -
+2023-08-10 14:33:12.465 +01:00 [INF] CORS policy execution successful.
+2023-08-10 14:33:12.466 +01:00 [INF] HTTP OPTIONS /Authentification/authentifier responded 204 in 1.0152 ms
+2023-08-10 14:33:12.468 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://127.0.0.1:5156/Authentification/authentifier - - - 204 - - 5.6504ms
+2023-08-10 14:33:12.470 +01:00 [INF] Request starting HTTP/1.1 POST http://127.0.0.1:5156/Authentification/authentifier application/json 64
+2023-08-10 14:33:12.471 +01:00 [INF] CORS policy execution successful.
+2023-08-10 14:33:12.472 +01:00 [INF] Executing endpoint 'apitest.Controllers.AuthentificationController.Authentifier (apitest)'
+2023-08-10 14:33:12.474 +01:00 [INF] Route matched with {action = "Authentifier", controller = "Authentification"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Authentifier(GenSecurOTP.Classes.AuthentificationRequest) on controller apitest.Controllers.AuthentificationController (apitest).
+2023-08-10 14:33:12.486 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Username], [u].[GSM], [u].[IdF], [u].[MotDePasse], [u].[Nom], [u].[Prenom]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__p_0
+2023-08-10 14:33:12.489 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__request_Username_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[CodeSec]
+FROM [CodesSecurite] AS [c]
+WHERE [c].[Username] = @__request_Username_0
+ORDER BY [c].[DateGen] DESC
+2023-08-10 14:33:12.491 +01:00 [INF] Authentification réussie pour l'utilisateur test à 10/08/2023 14:33:12
+2023-08-10 14:33:12.503 +01:00 [INF] Executed DbCommand (10ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [CodesOtp] ([Code], [DateExp], [DateGen], [Username])
+OUTPUT INSERTED.[IDOTP]
+VALUES (@p0, @p1, @p2, @p3);
+2023-08-10 14:33:12.506 +01:00 [INF] Code OTP généré pour l'utilisateur test : 6377704 à 10/08/2023 14:33:12. Date d'expiration : 10/08/2023 14:34:12
+2023-08-10 14:33:12.507 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`3[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-08-10 14:33:12.508 +01:00 [INF] Executed action apitest.Controllers.AuthentificationController.Authentifier (apitest) in 32.5394ms
+2023-08-10 14:33:12.509 +01:00 [INF] Executed endpoint 'apitest.Controllers.AuthentificationController.Authentifier (apitest)'
+2023-08-10 14:33:12.509 +01:00 [INF] HTTP POST /Authentification/authentifier responded 200 in 38.0000 ms
+2023-08-10 14:33:12.510 +01:00 [INF] Request finished HTTP/1.1 POST http://127.0.0.1:5156/Authentification/authentifier application/json 64 - 200 - application/json;+charset=utf-8 39.8001ms
+2023-08-10 14:33:22.463 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://127.0.0.1:5156/Authentification/authentifier - -
+2023-08-10 14:33:22.467 +01:00 [INF] CORS policy execution successful.
+2023-08-10 14:33:22.468 +01:00 [INF] HTTP OPTIONS /Authentification/authentifier responded 204 in 1.1954 ms
+2023-08-10 14:33:22.470 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://127.0.0.1:5156/Authentification/authentifier - - - 204 - - 6.2649ms
+2023-08-10 14:33:22.472 +01:00 [INF] Request starting HTTP/1.1 POST http://127.0.0.1:5156/Authentification/authentifier application/json 64
+2023-08-10 14:33:22.473 +01:00 [INF] CORS policy execution successful.
+2023-08-10 14:33:22.474 +01:00 [INF] Executing endpoint 'apitest.Controllers.AuthentificationController.Authentifier (apitest)'
+2023-08-10 14:33:22.474 +01:00 [INF] Route matched with {action = "Authentifier", controller = "Authentification"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Authentifier(GenSecurOTP.Classes.AuthentificationRequest) on controller apitest.Controllers.AuthentificationController (apitest).
+2023-08-10 14:33:22.478 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Username], [u].[GSM], [u].[IdF], [u].[MotDePasse], [u].[Nom], [u].[Prenom]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__p_0
+2023-08-10 14:33:22.481 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__request_Username_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[CodeSec]
+FROM [CodesSecurite] AS [c]
+WHERE [c].[Username] = @__request_Username_0
+ORDER BY [c].[DateGen] DESC
+2023-08-10 14:33:22.483 +01:00 [INF] Authentification réussie pour l'utilisateur test à 10/08/2023 14:33:22
+2023-08-10 14:33:22.486 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [CodesOtp] ([Code], [DateExp], [DateGen], [Username])
+OUTPUT INSERTED.[IDOTP]
+VALUES (@p0, @p1, @p2, @p3);
+2023-08-10 14:33:22.487 +01:00 [INF] Code OTP généré pour l'utilisateur test : 7668093 à 10/08/2023 14:33:22. Date d'expiration : 10/08/2023 14:34:22
+2023-08-10 14:33:22.488 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`3[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-08-10 14:33:22.489 +01:00 [INF] Executed action apitest.Controllers.AuthentificationController.Authentifier (apitest) in 13.3743ms
+2023-08-10 14:33:22.490 +01:00 [INF] Executed endpoint 'apitest.Controllers.AuthentificationController.Authentifier (apitest)'
+2023-08-10 14:33:22.491 +01:00 [INF] HTTP POST /Authentification/authentifier responded 200 in 17.8678 ms
+2023-08-10 14:33:22.492 +01:00 [INF] Request finished HTTP/1.1 POST http://127.0.0.1:5156/Authentification/authentifier application/json 64 - 200 - application/json;+charset=utf-8 20.2475ms
+2023-08-10 14:33:32.471 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://127.0.0.1:5156/Authentification/authentifier - -
+2023-08-10 14:33:32.476 +01:00 [INF] CORS policy execution successful.
+2023-08-10 14:33:32.481 +01:00 [INF] HTTP OPTIONS /Authentification/authentifier responded 204 in 4.6617 ms
+2023-08-10 14:33:32.482 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://127.0.0.1:5156/Authentification/authentifier - - - 204 - - 10.7461ms
+2023-08-10 14:33:32.484 +01:00 [INF] Request starting HTTP/1.1 POST http://127.0.0.1:5156/Authentification/authentifier application/json 64
+2023-08-10 14:33:32.484 +01:00 [INF] CORS policy execution successful.
+2023-08-10 14:33:32.485 +01:00 [INF] Executing endpoint 'apitest.Controllers.AuthentificationController.Authentifier (apitest)'
+2023-08-10 14:33:32.486 +01:00 [INF] Route matched with {action = "Authentifier", controller = "Authentification"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Authentifier(GenSecurOTP.Classes.AuthentificationRequest) on controller apitest.Controllers.AuthentificationController (apitest).
+2023-08-10 14:33:32.502 +01:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Username], [u].[GSM], [u].[IdF], [u].[MotDePasse], [u].[Nom], [u].[Prenom]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__p_0
+2023-08-10 14:33:32.505 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__request_Username_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[CodeSec]
+FROM [CodesSecurite] AS [c]
+WHERE [c].[Username] = @__request_Username_0
+ORDER BY [c].[DateGen] DESC
+2023-08-10 14:33:32.507 +01:00 [INF] Authentification réussie pour l'utilisateur test à 10/08/2023 14:33:32
+2023-08-10 14:33:32.509 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [CodesOtp] ([Code], [DateExp], [DateGen], [Username])
+OUTPUT INSERTED.[IDOTP]
+VALUES (@p0, @p1, @p2, @p3);
+2023-08-10 14:33:32.511 +01:00 [INF] Code OTP généré pour l'utilisateur test : 2613120 à 10/08/2023 14:33:32. Date d'expiration : 10/08/2023 14:34:32
+2023-08-10 14:33:32.512 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`3[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-08-10 14:33:32.513 +01:00 [INF] Executed action apitest.Controllers.AuthentificationController.Authentifier (apitest) in 25.41ms
+2023-08-10 14:33:32.514 +01:00 [INF] Executed endpoint 'apitest.Controllers.AuthentificationController.Authentifier (apitest)'
+2023-08-10 14:33:32.514 +01:00 [INF] HTTP POST /Authentification/authentifier responded 200 in 29.7101 ms
+2023-08-10 14:33:32.515 +01:00 [INF] Request finished HTTP/1.1 POST http://127.0.0.1:5156/Authentification/authentifier application/json 64 - 200 - application/json;+charset=utf-8 31.4876ms
+2023-08-10 14:33:42.476 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://127.0.0.1:5156/Authentification/authentifier - -
+2023-08-10 14:33:42.481 +01:00 [INF] CORS policy execution successful.
+2023-08-10 14:33:42.486 +01:00 [INF] HTTP OPTIONS /Authentification/authentifier responded 204 in 5.0188 ms
+2023-08-10 14:33:42.493 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://127.0.0.1:5156/Authentification/authentifier - - - 204 - - 17.5713ms
+2023-08-10 14:33:42.499 +01:00 [INF] Request starting HTTP/1.1 POST http://127.0.0.1:5156/Authentification/authentifier application/json 64
+2023-08-10 14:33:42.501 +01:00 [INF] CORS policy execution successful.
+2023-08-10 14:33:42.505 +01:00 [INF] Executing endpoint 'apitest.Controllers.AuthentificationController.Authentifier (apitest)'
+2023-08-10 14:33:42.509 +01:00 [INF] Route matched with {action = "Authentifier", controller = "Authentification"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Authentifier(GenSecurOTP.Classes.AuthentificationRequest) on controller apitest.Controllers.AuthentificationController (apitest).
+2023-08-10 14:33:42.513 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Username], [u].[GSM], [u].[IdF], [u].[MotDePasse], [u].[Nom], [u].[Prenom]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__p_0
+2023-08-10 14:33:42.516 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__request_Username_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[CodeSec]
+FROM [CodesSecurite] AS [c]
+WHERE [c].[Username] = @__request_Username_0
+ORDER BY [c].[DateGen] DESC
+2023-08-10 14:33:42.518 +01:00 [INF] Authentification réussie pour l'utilisateur test à 10/08/2023 14:33:42
+2023-08-10 14:33:42.521 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [CodesOtp] ([Code], [DateExp], [DateGen], [Username])
+OUTPUT INSERTED.[IDOTP]
+VALUES (@p0, @p1, @p2, @p3);
+2023-08-10 14:33:42.524 +01:00 [INF] Code OTP généré pour l'utilisateur test : 6862591 à 10/08/2023 14:33:42. Date d'expiration : 10/08/2023 14:34:42
+2023-08-10 14:33:42.525 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`3[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-08-10 14:33:42.527 +01:00 [INF] Executed action apitest.Controllers.AuthentificationController.Authentifier (apitest) in 15.906ms
+2023-08-10 14:33:42.527 +01:00 [INF] Executed endpoint 'apitest.Controllers.AuthentificationController.Authentifier (apitest)'
+2023-08-10 14:33:42.528 +01:00 [INF] HTTP POST /Authentification/authentifier responded 200 in 26.8042 ms
+2023-08-10 14:33:42.529 +01:00 [INF] Request finished HTTP/1.1 POST http://127.0.0.1:5156/Authentification/authentifier application/json 64 - 200 - application/json;+charset=utf-8 30.2480ms
+2023-08-10 14:33:52.467 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://127.0.0.1:5156/Authentification/authentifier - -
+2023-08-10 14:33:52.468 +01:00 [INF] CORS policy execution successful.
+2023-08-10 14:33:52.469 +01:00 [INF] HTTP OPTIONS /Authentification/authentifier responded 204 in 0.9710 ms
+2023-08-10 14:33:52.470 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://127.0.0.1:5156/Authentification/authentifier - - - 204 - - 3.0358ms
+2023-08-10 14:33:52.472 +01:00 [INF] Request starting HTTP/1.1 POST http://127.0.0.1:5156/Authentification/authentifier application/json 64
+2023-08-10 14:33:52.473 +01:00 [INF] CORS policy execution successful.
+2023-08-10 14:33:52.474 +01:00 [INF] Executing endpoint 'apitest.Controllers.AuthentificationController.Authentifier (apitest)'
+2023-08-10 14:33:52.474 +01:00 [INF] Route matched with {action = "Authentifier", controller = "Authentification"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Authentifier(GenSecurOTP.Classes.AuthentificationRequest) on controller apitest.Controllers.AuthentificationController (apitest).
+2023-08-10 14:33:52.484 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Username], [u].[GSM], [u].[IdF], [u].[MotDePasse], [u].[Nom], [u].[Prenom]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__p_0
+2023-08-10 14:33:52.487 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@__request_Username_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[CodeSec]
+FROM [CodesSecurite] AS [c]
+WHERE [c].[Username] = @__request_Username_0
+ORDER BY [c].[DateGen] DESC
+2023-08-10 14:33:52.488 +01:00 [INF] Authentification réussie pour l'utilisateur test à 10/08/2023 14:33:52
+2023-08-10 14:33:52.491 +01:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [CodesOtp] ([Code], [DateExp], [DateGen], [Username])
+OUTPUT INSERTED.[IDOTP]
+VALUES (@p0, @p1, @p2, @p3);
+2023-08-10 14:33:52.493 +01:00 [INF] Code OTP généré pour l'utilisateur test : 5186936 à 10/08/2023 14:33:52. Date d'expiration : 10/08/2023 14:34:52
+2023-08-10 14:33:52.493 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`3[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Boolean, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-08-10 14:33:52.494 +01:00 [INF] Executed action apitest.Controllers.AuthentificationController.Authentifier (apitest) in 18.8947ms
+2023-08-10 14:33:52.496 +01:00 [INF] Executed endpoint 'apitest.Controllers.AuthentificationController.Authentifier (apitest)'
+2023-08-10 14:33:52.497 +01:00 [INF] HTTP POST /Authentification/authentifier responded 200 in 23.6207 ms
+2023-08-10 14:33:52.498 +01:00 [INF] Request finished HTTP/1.1 POST http://127.0.0.1:5156/Authentification/authentifier application/json 64 - 200 - application/json;+charset=utf-8 25.4782ms

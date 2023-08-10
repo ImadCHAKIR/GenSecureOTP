@@ -6,7 +6,7 @@ export const environment = {
   production: false,
   OTP_URL: 'http://127.0.0.1:3000',
   Auth_URL:'http://127.0.0.1:5156/Authentification/authentifier',
-  Ident_URL:'http://127.0.0.1:3000/Identification/identifier'
+  Ident_URL:'http://127.0.0.1:5156/Identification/identifier'
 };
 
 /*
