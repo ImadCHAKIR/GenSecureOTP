@@ -15,6 +15,7 @@ import { Router } from '@angular/router';
 export class AuthComponentComponent implements OnInit {
   formData: FormGroup;
   isLoading: boolean = false;
+  message: string = ''
 
   constructor(private fb:FormBuilder, private auth:AuthService, private globals: Globals, private router: Router) {
     this.formData = this.fb.group({
@@ -30,6 +31,7 @@ export class AuthComponentComponent implements OnInit {
 
   login(){
     var user = {};
+    
     if(this.formData.valid){
       this.isLoading = true
 
@@ -47,8 +49,13 @@ export class AuthComponentComponent implements OnInit {
 
           this.router.navigate(['otp'])
         }
-      });
-    }  
+      },
+          error => this.message = error.statusText + ' Access'
+      );
+    }else{
+      this.message = 'Invalid Informations'  
+    }
+    
   }
 
 }

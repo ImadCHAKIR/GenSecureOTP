@@ -4585,11 +4585,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sir0s\\Desktop\\apitest\\apitest.csproj",
+      "projectUniqueName": "c:\\Users\\sir0s\\Desktop\\Ionic-Angular-Login-Template-master\\CodeGenerator\\api\\apitest.csproj",
       "projectName": "apitest",
-      "projectPath": "C:\\Users\\sir0s\\Desktop\\apitest\\apitest.csproj",
+      "projectPath": "c:\\Users\\sir0s\\Desktop\\Ionic-Angular-Login-Template-master\\CodeGenerator\\api\\apitest.csproj",
       "packagesPath": "C:\\Users\\sir0s\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sir0s\\Desktop\\apitest\\obj\\",
+      "outputPath": "c:\\Users\\sir0s\\Desktop\\Ionic-Angular-Login-Template-master\\CodeGenerator\\api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\sir0s\\AppData\\Roaming\\NuGet\\NuGet.Config",

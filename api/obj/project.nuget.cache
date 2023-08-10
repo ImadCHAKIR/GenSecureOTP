@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "njKqGBdsmtac5kRKA1aDj5YP/rPePf2WW/2eUWvdX515kl7QPp9Gt/tJMCMr9i1sV6GQ4WS3Hb/WRPWRGpd9XA==",
+  "dgSpecHash": "X/pEY5liVpsO8FIP7A1IxTGKnRulfIFcWrwVIC9JtolZfY9a7ddSRMvzw+vDR8r3zJJeajp+DyjBrGjA/brgzA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\sir0s\\Desktop\\apitest\\apitest.csproj",
+  "projectFilePath": "c:\\Users\\sir0s\\Desktop\\Ionic-Angular-Login-Template-master\\CodeGenerator\\api\\apitest.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sir0s\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\sir0s\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

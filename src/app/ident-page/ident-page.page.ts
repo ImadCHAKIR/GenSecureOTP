@@ -5,12 +5,11 @@ import { IdentService } from '../services/ident.service';
 import { ReactiveFormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-ident',
-  templateUrl: './ident.component.html',
-  styleUrls: ['./ident.component.scss'],
-  imports: [ ReactiveFormsModule ]
+  selector: 'app-ident-page',
+  templateUrl: './ident-page.page.html',
+  styleUrls: ['./ident-page.page.scss'],
 })
-export class IdentComponent implements OnInit {
+export class IdentPagePage implements OnInit {
   formReset: FormGroup;
   isLoading : boolean = false
   message : string = ''

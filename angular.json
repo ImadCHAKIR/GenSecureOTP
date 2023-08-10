@@ -25,6 +25,11 @@
                 "output": "assets"
               },
               {
+                "glob": "**/*.json",
+                "input": "src/speech.json",
+                "output": "speech"
+              },
+              {
                 "glob": "**/*.svg",
                 "input": "node_modules/ionicons/dist/ionicons/svg",
                 "output": "./svg"
