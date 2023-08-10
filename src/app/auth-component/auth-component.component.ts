@@ -5,6 +5,8 @@ import { AuthService } from '../services/auth.service';
 import { getElement } from 'ionicons/dist/types/stencil-public-runtime';
 import { Globals } from '../globals';
 import { Router } from '@angular/router';
+import { LanguageService } from '../services/language.service';
+import { ExceptionService } from '../services/exception.service';
 
 @Component({
   selector: 'app-auth-component',
@@ -15,9 +17,15 @@ import { Router } from '@angular/router';
 export class AuthComponentComponent implements OnInit {
   formData: FormGroup;
   isLoading: boolean = false;
-  message: string = ''
 
-  constructor(private fb:FormBuilder, private auth:AuthService, private globals: Globals, private router: Router) {
+  constructor(
+    private fb:FormBuilder, 
+    private auth:AuthService, 
+    private globals: Globals, 
+    private router: Router,
+    private lang: LanguageService,
+    private exception: ExceptionService) 
+  {
     this.formData = this.fb.group({
       username: ['',[Validators.required]],
       password: ['',[Validators.required]],
@@ -30,16 +38,14 @@ export class AuthComponentComponent implements OnInit {
   }
 
   login(){
-    var user = {};
+    var user = {
+      "username": this.formData.get('username').value,
+      "motDePasse": this.formData.get('password').value,
+      "codeSecurite": this.formData.get('securityCode').value
+    }
     
     if(this.formData.valid){
       this.isLoading = true
-
-      user = {
-        "username": this.formData.get('username').value,
-        "motDePasse": this.formData.get('password').value,
-        "codeSecurite": this.formData.get('securityCode').value
-      }
 
       this.auth.userLogin(user).subscribe((data:any)=>{
         console.log(data);
@@ -50,12 +56,17 @@ export class AuthComponentComponent implements OnInit {
           this.router.navigate(['otp'])
         }
       },
-          error => this.message = error.statusText + ' Access'
+    error => this.exception.setMessage(this.lang.getLang()["Exceptions"]["incorrect"])
       );
-    }else{
-      this.message = 'Invalid Informations'  
+      return
     }
     
+    if (!(user["username"] && user["motDePasse"] && user["codeSecurite"])){
+      this.exception.setMessage(this.lang.getLang()["Exceptions"]["empty"] )
+      return      
+    }
+    
+    this.exception.setMessage(this.lang.getLang()["Exceptions"]["invalid"] )
   }
 
 }

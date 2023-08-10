@@ -9,36 +9,36 @@
     <form [formGroup]="formReset">
       <ion-item lines="none" class="ion-item" color="secondary">
         <fieldset  class="input-item">
-          <legend>Username</legend> 
-          <ion-input formControlName="username" type="text" placeholder="Usename"></ion-input>
+          <legend>{{this.lang.getLang()["Username"]}}</legend> 
+          <ion-input formControlName="username" type="text" placeholder="{{this.lang.getLang()['Username']}}"></ion-input>
         </fieldset>
       </ion-item>
       
       <ion-item lines="none" class="ion-item" color="secondary">
         <fieldset class="input-item">
-          <legend>Password</legend> 
+          <legend>{{this.lang.getLang()["Password"]}}</legend> 
           <ion-input formControlName="password" type="password" placeholder="*******"></ion-input>
         </fieldset>
       </ion-item>
       
       <ion-item lines="none" class="ion-item" color="secondary">
         <fieldset class="input-item">
-          <legend>GSM</legend> 
+          <legend>{{this.lang.getLang()["GSM"]}}</legend> 
           <ion-input formControlName="gsm" type="text" placeholder="*******"></ion-input>
         </fieldset>
       </ion-item>
 
       <ion-item lines="none" class="ion-item" color="secondary">
         <fieldset class="input-item">
-          <legend>Identité fiscale</legend> 
+          <legend>{{this.lang.getLang()["fiscal identity"]}}</legend> 
           <ion-input formControlName="idf" type="text" placeholder="*******"></ion-input>
         </fieldset>
       </ion-item>
 
-      <p class="routing" (click)="back()">Sign In?</p>
-      <p class="message" >{{message}}</p>
+      <p class="routing" (click)="back()">{{this.lang.getLang()["Remenber"]}}</p>
+      <p class="message" >{{this.exception.getMessage()}}</p>
 
-      <ion-button class="login-button" color="dark" (click)="identify()" expand="block">Reset Security Code</ion-button>
+      <ion-button class="login-button" color="dark" (click)="identify()" expand="block">{{this.lang.getLang()["Reset"]}}</ion-button>
     </form>
   </div>
 

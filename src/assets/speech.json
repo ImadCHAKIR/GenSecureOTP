@@ -1,5 +1,5 @@
 {
-    "eng":{
+    "en":{
         "Username": "Usename",
         "Password": "Password",
         "Security Code": "Security Code",
@@ -8,7 +8,12 @@
         "GSM":"GSM",
         "fiscal identity": "fiscal identity",
         "Remenber": "Sign In?",
-        "Reset": "Reset Security Code"
+        "Reset": "Reset Security Code",
+        "Exceptions":{
+            "empty":"all fields must be completed",
+            "incorrect":"one or more field are incorrect",
+            "invalid": "Invalid informations"
+        }
     },
     "fr":{
         "Username": "Nom d'utilisateur",
@@ -19,7 +24,12 @@
         "GSM":"GSM",
         "fiscal identity": "Identité fiscale",
         "Remenber": "S'authentifier",
-        "Reset": "Changer Code sécurité"
+        "Reset": "Changer Code sécurité",
+        "Exceptions":{
+            "empty":"Tous les champs doivent être remplis",
+            "incorrect":"un ou plusieurs champs sont incorrects",
+            "invalid": "Informations invalides"
+        }
     },
     "ar":{
         "Username": "اسم المستخدم",
@@ -30,6 +40,11 @@
         "GSM":"GSM",
         "fiscal identity": "الهوية الضريبية",
         "Remenber": "المصادقة",
-        "Reset": "تغيير كود الحماية"
+        "Reset": "تغيير كود الحماية",
+        "Exceptions":{
+            "empty":"كل الحقول يجب أن تكون مملوئة",
+            "incorrect":"حقل واحد أو أكثر غير صحيح",
+            "invalid": "معلومات غير صحيحة"
+        }
     }
 }
