@@ -1,7 +1,0 @@
-{
-  "name": "Ancfcc",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular"
-}
