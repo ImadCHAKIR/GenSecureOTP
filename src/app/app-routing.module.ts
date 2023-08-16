@@ -1,16 +1,17 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { AuthComponentComponent } from './auth-component/auth-component.component';
 import { OTPGeneratorComponent } from './otpgenerator/otpgenerator.component';
-import { IdentComponent } from './ident/ident.component';
 import { AuthGuard } from './auth.guard';
 import { IdentPagePage } from './ident-page/ident-page.page';
+import { AuthPagePage } from './auth-page/auth-page.page';
 
 const routes: Routes = [
-  {path: '',component: AuthComponentComponent},
-  {path: 'auth',component: AuthComponentComponent},
-  {path: 'ident',component: IdentPagePage},
   {path: 'otp',component: OTPGeneratorComponent, canActivate: [AuthGuard]},
+  {path: '',loadChildren: () => import('./auth-page/auth-page.module').then( m => m.AuthPagePageModule)},
+  {path: 'ident',loadChildren: () => import('./ident-page/ident-page.module').then( m => m.IdentPagePageModule)},
+  {path: 'auth', redirectTo: ''},
+
+
 ];
 
 @NgModule({

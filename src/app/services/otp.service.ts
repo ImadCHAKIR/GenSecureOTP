@@ -10,6 +10,6 @@ export class OtpService {
   constructor(private http:HttpClient) {}
 
   getOtp(req){
-    return this.http.post(`${this.OTP_URL}`,req);
+    return this.http.post(`${this.OTP_URL}`,{ 'Username': req});
   }
 }

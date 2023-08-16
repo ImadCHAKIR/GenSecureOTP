@@ -17,7 +17,7 @@
     display: flex;
     flex-direction: row;
     ion-input{
-        margin-left: 40%;
+        margin-left: 20%;
     }
 }
 .copyBtn{
@@ -27,12 +27,29 @@
     width: 70px;
     height: 55px;
     right: -20px;
-    top: -14px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    cursor: pointer;
+}
+.refreshBtn{
+    position: relative;
+    background: none;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    left: -17.5px;
+    top:10px;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     cursor: pointer;
 }
 
+.expired{
+    width: 100%;
+    text-align: center;
+    color: black;
+}
 
-
-  
+.hide{
+    display: none;
+}  

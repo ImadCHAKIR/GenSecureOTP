@@ -5,7 +5,7 @@
   </div>
   <!-- Login Page -->
   <div>
-    <form [formGroup]="input.getFormData()">
+    <form [formGroup]="authForm">
       <ion-item lines="none" class="ion-item" color="secondary">
         <fieldset  class="input-item">
           <legend>{{this.lang.getLang()["Username"]}}</legend> 
@@ -27,7 +27,7 @@
         </fieldset>
       </ion-item>
 
-      <p class="routing" [routerLink]="['/ident']">{{this.lang.getLang()["Forget"]}}</p>
+      <p class="routing" (click)="goToIdent()">{{this.lang.getLang()["Forget"]}}</p>
       <p class="message" >{{this.exception.getMessage()}}</p>
       <ion-button class="login-button" color="dark" (click)="login()" expand="block">{{this.lang.getLang()["Login"]}}</ion-button>
     </form>

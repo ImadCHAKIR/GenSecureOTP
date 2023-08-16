@@ -8,16 +8,17 @@ import { Router } from '@angular/router';
 import { LanguageService } from '../services/language.service';
 import { ExceptionService } from '../services/exception.service';
 import { InputService } from '../services/input.service';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-auth-component',
   providers: [ Globals ],
-  templateUrl: './auth-component.component.html',
-  styleUrls: ['./auth-component.component.scss'],
+  templateUrl: './auth-page.page.html',
+  styleUrls: ['./auth-page.page.scss'],
 })
-export class AuthComponentComponent implements OnInit {
-  
+export class AuthPagePage implements OnInit {
   isLoading: boolean = false;
+  public authForm: FormGroup
 
   constructor( 
     private auth:AuthService, 
@@ -25,35 +26,41 @@ export class AuthComponentComponent implements OnInit {
     private router: Router,
     private lang: LanguageService,
     private exception: ExceptionService,
-    private input: InputService) 
+    private navCtrl: NavController,
+    private fb: FormBuilder) 
   {
-    
+    this.authForm = this.fb.group({
+      username: ['',[Validators.required]],
+      password: ['',[Validators.required]],
+      securityCode: ['',[Validators.required]]
+    });
+  }
+
+  goToIdent() {
+    this.navCtrl.navigateForward('ident');
   }
 
   ngOnInit(){
-    setTimeout(() => this.globals.setStarting(), 5000);
+    setTimeout(() => this.globals.setStarting(), 4000);
   }
 
   login(){
     var user = {
-      "username": this.input.getFormData().get('username').value,
-      "motDePasse": this.input.getFormData().get('password').value,
-      "codeSecurite": this.input.getFormData().get('securityCode').value
+      "username": this.authForm.get('username').value,
+      "motDePasse": this.authForm.get('password').value,
+      "codeSecurite": this.authForm.get('securityCode').value
     }
     
-    if(this.input.getFormData().valid){
+    if(this.authForm.valid){
       this.isLoading = true
 
       this.auth.userLogin(user).subscribe((data:any)=>{
-        console.log(data);
         if (data.connect){
-          localStorage.setItem('code',data.code)
-          localStorage.setItem('user',JSON.stringify(user))
-
+          sessionStorage.setItem('user',user.username)
           this.router.navigate(['otp'])
         }
       },
-    error => this.exception.setMessage(this.lang.getLang()["Exceptions"]["incorrect"])
+        error => this.exception.setMessage(this.lang.getLang()["Exceptions"]["incorrect"])
       );
       return
     }

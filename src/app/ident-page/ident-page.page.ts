@@ -6,6 +6,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { LanguageService } from '../services/language.service';
 import { ExceptionService } from '../services/exception.service';
 import { InputService } from '../services/input.service';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-ident-page',
@@ -20,14 +21,15 @@ export class IdentPagePage implements OnInit {
     private ident: IdentService,
     private lang: LanguageService,
     private exception: ExceptionService,
-    private input: InputService) 
+    private input: InputService,
+    private navCtrl: NavController) 
   { 
   }
 
   ngOnInit() {}
 
-  back(){
-    this.router.navigate(['..'])
+  goBack() {
+    this.navCtrl.pop();
   }
 
   identify(){
@@ -37,8 +39,6 @@ export class IdentPagePage implements OnInit {
       "gsm": this.input.getFormReset().get('gsm').value,
       "idF": this.input.getFormReset().get('idf').value
     }
-
-    console.log(user)
 
     if(this.input.getFormReset().valid){
       this.isLoading = true

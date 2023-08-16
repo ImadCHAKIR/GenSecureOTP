@@ -7,9 +7,7 @@ import lang from '../../assets/speech.json'
 export class LanguageService {
   language: string = "fr" 
 
-  constructor() {
-    console.log(lang.ar["Username"])
-  }
+  constructor() {}
 
   setLanguage(language){
     this.language = language
