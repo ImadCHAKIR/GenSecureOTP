@@ -14,7 +14,7 @@ export class AuthService {
   }
 
   isLoggedIn() {
-    if (localStorage.getItem('user')){
+    if (sessionStorage.getItem('user')){
       return true
     }
 
