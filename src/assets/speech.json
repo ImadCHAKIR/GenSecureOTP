@@ -9,6 +9,7 @@
         "fiscal identity": "fiscal identity",
         "Remenber": "Sign In?",
         "Reset": "Reset Security Code",
+        "securityChanged":"Security Code has been sent to your email",
         "Exceptions":{
             "empty":"all fields must be completed",
             "incorrect":"one or more field are incorrect",
@@ -25,6 +26,7 @@
         "fiscal identity": "Identité fiscale",
         "Remenber": "S'authentifier",
         "Reset": "Changer Code sécurité",
+        "securityChanged":"Le code de sécurité a été envoyé à votre adresse e-mail",
         "Exceptions":{
             "empty":"Tous les champs doivent être remplis",
             "incorrect":"un ou plusieurs champs sont incorrects",
@@ -41,6 +43,7 @@
         "fiscal identity": "الهوية الضريبية",
         "Remenber": "المصادقة",
         "Reset": "تغيير كود الحماية",
+        "securityChanged":"تم إرسال رمز الأمان إلى بريدك الإلكتروني",
         "Exceptions":{
             "empty":"كل الحقول يجب أن تكون مملوئة",
             "incorrect":"حقل واحد أو أكثر غير صحيح",

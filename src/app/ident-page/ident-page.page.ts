@@ -44,8 +44,8 @@ export class IdentPagePage implements OnInit {
       this.isLoading = true
 
       this.ident.userIdent(user).subscribe(
-        (data:any)=>{ console.log(data);},
-        error => this.exception.setMessage(this.lang.getLang()["Exceptions"]["incorrect"])
+        (data :any) => this.exception.setMessage(this.lang.getLang()["securityChanged"]),
+        (error:any) => this.exception.setMessage(this.lang.getLang()["Exceptions"]["incorrect"])
       )
       return
     }  
