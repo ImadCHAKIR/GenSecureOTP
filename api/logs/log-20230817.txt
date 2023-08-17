@@ -1,0 +1,55 @@
+2023-08-17 20:49:44.731 +01:00 [WRN] Overriding address(es) 'http://localhost:5156'. Binding to endpoints defined via IConfiguration and/or UseKestrel() instead.
+2023-08-17 20:49:44.790 +01:00 [INF] Now listening on: http://localhost:12345
+2023-08-17 20:49:44.793 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-08-17 20:49:44.794 +01:00 [INF] Hosting environment: Development
+2023-08-17 20:49:44.795 +01:00 [INF] Content root path: C:\Users\sir0s\Desktop\mod\GenSecureOTP\api
+2023-08-17 20:52:24.357 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://127.0.0.1:12345/Identification/identifier - -
+2023-08-17 20:52:24.424 +01:00 [WRN] Failed to determine the https port for redirect.
+2023-08-17 20:52:24.430 +01:00 [INF] CORS policy execution successful.
+2023-08-17 20:52:24.435 +01:00 [INF] HTTP OPTIONS /Identification/identifier responded 204 in 13.1662 ms
+2023-08-17 20:52:24.454 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://127.0.0.1:12345/Identification/identifier - - - 204 - - 100.1975ms
+2023-08-17 20:52:24.471 +01:00 [INF] Request starting HTTP/1.1 POST http://127.0.0.1:12345/Identification/identifier application/json 74
+2023-08-17 20:52:24.482 +01:00 [INF] CORS policy execution successful.
+2023-08-17 20:52:24.495 +01:00 [INF] Executing endpoint 'apitest.Controllers.IdentificationController.Identifier (apitest)'
+2023-08-17 20:52:24.545 +01:00 [INF] Route matched with {action = "Identifier", controller = "Identification"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Identifier(GenSecurOTP.Classes.IdentificationRequest) on controller apitest.Controllers.IdentificationController (apitest).
+2023-08-17 20:52:25.931 +01:00 [INF] Executed DbCommand (40ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Username], [u].[GSM], [u].[IdF], [u].[MotDePasse], [u].[Nom], [u].[Prenom]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__p_0
+2023-08-17 20:52:26.144 +01:00 [INF] Executed DbCommand (13ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [CodesSecurite] ([CodeSec], [DateGen], [Username])
+OUTPUT INSERTED.[IDCS]
+VALUES (@p0, @p1, @p2);
+2023-08-17 20:52:26.180 +01:00 [INF] Code de sécurité généré pour l'utilisateur test : 1521499 à 17/08/2023 20:52:26
+2023-08-17 20:52:28.397 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`2[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-08-17 20:52:28.428 +01:00 [INF] Executed action apitest.Controllers.IdentificationController.Identifier (apitest) in 3872.8021ms
+2023-08-17 20:52:28.431 +01:00 [INF] Executed endpoint 'apitest.Controllers.IdentificationController.Identifier (apitest)'
+2023-08-17 20:52:28.434 +01:00 [INF] HTTP POST /Identification/identifier responded 200 in 3955.0453 ms
+2023-08-17 20:52:28.454 +01:00 [INF] Request finished HTTP/1.1 POST http://127.0.0.1:12345/Identification/identifier application/json 74 - 200 - application/json;+charset=utf-8 3982.9000ms
+2023-08-17 20:53:04.584 +01:00 [INF] Request starting HTTP/1.1 OPTIONS http://127.0.0.1:12345/Identification/identifier - -
+2023-08-17 20:53:04.588 +01:00 [INF] CORS policy execution successful.
+2023-08-17 20:53:04.591 +01:00 [INF] HTTP OPTIONS /Identification/identifier responded 204 in 2.8341 ms
+2023-08-17 20:53:04.593 +01:00 [INF] Request finished HTTP/1.1 OPTIONS http://127.0.0.1:12345/Identification/identifier - - - 204 - - 8.9027ms
+2023-08-17 20:53:04.596 +01:00 [INF] Request starting HTTP/1.1 POST http://127.0.0.1:12345/Identification/identifier application/json 74
+2023-08-17 20:53:04.598 +01:00 [INF] CORS policy execution successful.
+2023-08-17 20:53:04.599 +01:00 [INF] Executing endpoint 'apitest.Controllers.IdentificationController.Identifier (apitest)'
+2023-08-17 20:53:04.600 +01:00 [INF] Route matched with {action = "Identifier", controller = "Identification"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Identifier(GenSecurOTP.Classes.IdentificationRequest) on controller apitest.Controllers.IdentificationController (apitest).
+2023-08-17 20:53:04.679 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[@__p_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Username], [u].[GSM], [u].[IdF], [u].[MotDePasse], [u].[Nom], [u].[Prenom]
+FROM [Users] AS [u]
+WHERE [u].[Username] = @__p_0
+2023-08-17 20:53:04.702 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [CodesSecurite] ([CodeSec], [DateGen], [Username])
+OUTPUT INSERTED.[IDCS]
+VALUES (@p0, @p1, @p2);
+2023-08-17 20:53:04.712 +01:00 [INF] Code de sécurité généré pour l'utilisateur test : 2459801 à 17/08/2023 20:53:04
+2023-08-17 20:53:07.059 +01:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType2`2[[System.String, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Int32, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-08-17 20:53:07.067 +01:00 [INF] Executed action apitest.Controllers.IdentificationController.Identifier (apitest) in 2465.1894ms
+2023-08-17 20:53:07.069 +01:00 [INF] Executed endpoint 'apitest.Controllers.IdentificationController.Identifier (apitest)'
+2023-08-17 20:53:07.072 +01:00 [INF] HTTP POST /Identification/identifier responded 200 in 2474.6616 ms
+2023-08-17 20:53:07.076 +01:00 [INF] Request finished HTTP/1.1 POST http://127.0.0.1:12345/Identification/identifier application/json 74 - 200 - application/json;+charset=utf-8 2480.3965ms
+2023-08-17 20:53:20.332 +01:00 [INF] Application is shutting down...

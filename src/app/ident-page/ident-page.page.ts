@@ -15,6 +15,7 @@ import { NavController } from '@ionic/angular';
 })
 export class IdentPagePage implements OnInit {
   isLoading : boolean = false
+  msg : string = 'error'
 
   constructor(
     private router: Router, 
@@ -33,6 +34,8 @@ export class IdentPagePage implements OnInit {
   }
 
   identify(){
+    this.msg = "error"
+
     var user = {
       "username": this.input.getFormReset().get('username').value,
       "motDePasse": this.input.getFormReset().get('password').value,
@@ -44,7 +47,7 @@ export class IdentPagePage implements OnInit {
       this.isLoading = true
 
       this.ident.userIdent(user).subscribe(
-        (data :any) => this.exception.setMessage(this.lang.getLang()["securityChanged"]),
+        (data :any) => {this.exception.setMessage(this.lang.getLang()["securityChanged"]);this.msg = "success"},
         (error:any) => this.exception.setMessage(this.lang.getLang()["Exceptions"]["incorrect"])
       )
       return

@@ -36,7 +36,7 @@
       </ion-item>
 
       <p class="routing" (click)="goBack()">{{this.lang.getLang()["Remenber"]}}</p>
-      <p class="message" >{{this.exception.getMessage()}}</p>
+      <p class="message" [ngClass]="msg" >{{this.exception.getMessage()}}</p>
 
       <ion-button class="login-button" color="dark" (click)="identify()" expand="block">{{this.lang.getLang()["Reset"]}}</ion-button>
     </form>
